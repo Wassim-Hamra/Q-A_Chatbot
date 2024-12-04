@@ -2,6 +2,7 @@ import streamlit as st
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.tracing import Tracing
 import os
 from dotenv import load_dotenv
 
@@ -13,6 +14,9 @@ langchain_tracing = os.getenv("LANGCHAIN_TRACING_V2")
 langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
 langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
 langchain_project = os.getenv("LANGCHAIN_PROJECT")
+if langchain_tracing == "true":
+    tracing = Tracing()
+    tracing.start_tracking(api_key=langchain_api_key, endpoint=langchain_endpoint)
 
 # prompt template
 prompt = ChatPromptTemplate([
