@@ -2,20 +2,26 @@ import streamlit as st
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-import os
-from dotenv import load_dotenv
-import requests
-
-response = requests.get("https://api.smith.langchain.com")
-print(response.status_code)
 
 # Loading environ variables
-load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
-langchain_tracing = os.getenv("LANGCHAIN_TRACING_V2")
-langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
-langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
-langchain_project = os.getenv("LANGCHAIN_PROJECT")
+
+# for local use
+#import os
+#from dotenv import load_dotenv
+#load_dotenv()
+#groq_api_key = os.getenv("GROQ_API_KEY")
+#langchain_tracing = os.getenv("LANGCHAIN_TRACING_V2")
+#langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
+#langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
+#langchain_project = os.getenv("LANGCHAIN_PROJECT")
+
+# for deployment
+groq_api_key = st.secrets["groq"]["api_key"]
+langchain_tracing = st.secrets["langchain"]["tracing_v2"]
+langchain_endpoint = st.secrets["langchain"]["endpoint"]
+langchain_api_key = st.secrets["langchain"]["api_key"]
+langchain_project = st.secrets["langchain"]["project"]
+
 
 # prompt template
 prompt = ChatPromptTemplate([
