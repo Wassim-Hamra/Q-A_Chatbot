@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 # Loading environ variables
 load_dotenv()
+groq_api_key = os.getenv("GROQ_API_KEY")
 
 # prompt template
 prompt = ChatPromptTemplate([
