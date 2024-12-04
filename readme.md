@@ -9,6 +9,8 @@
 
 #### ***Groq for LLM-based interaction.***
 
+#### ***LangSmith for tracking.***
+
 #### ***Streamlit for the web interface***
   *  ***Web App link: [llm-chabot-wassim-hamra.streamlit.app](https://llm-chabot-wassim-hamra.streamlit.app/)***
   * **⚠️ Wake the Streamlit Application if it's sleeping**
