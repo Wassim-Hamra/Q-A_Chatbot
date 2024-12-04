@@ -8,6 +8,11 @@ from dotenv import load_dotenv
 # Loading environ variables
 load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
+groq_api_key = os.getenv("GROQ_API_KEY")
+langchain_tracing = os.getenv("LANGCHAIN_TRACING_V2")
+langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
+langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
+langchain_project = os.getenv("LANGCHAIN_PROJECT")
 
 # prompt template
 prompt = ChatPromptTemplate([
