@@ -4,6 +4,10 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 import os
 from dotenv import load_dotenv
+import requests
+
+response = requests.get("https://api.smith.langchain.com")
+print(response.status_code)
 
 # Loading environ variables
 load_dotenv()
@@ -12,7 +16,6 @@ langchain_tracing = os.getenv("LANGCHAIN_TRACING_V2")
 langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
 langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
 langchain_project = os.getenv("LANGCHAIN_PROJECT")
-print(langchain_project)
 
 # prompt template
 prompt = ChatPromptTemplate([
