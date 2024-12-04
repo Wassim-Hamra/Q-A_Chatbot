@@ -10,7 +10,7 @@
 #### ***Groq for LLM-based interaction.***
 
 #### ***Streamlit for the web interface***
-  *  ***Web App link: [next-word-wassim-hamra.streamlit.app](https://next-word-prediction-wassim-hamraapp.streamlit.app/)***
+  *  ***Web App link: [llm-chabot-wassim-hamra.streamlit.app](https://llm-chabot-wassim-hamra.streamlit.app/)***
   * **⚠️ Wake the Streamlit Application if it's sleeping**
 
 ### ***Setup:***
