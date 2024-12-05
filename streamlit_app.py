@@ -16,11 +16,11 @@ from langchain_core.prompts import ChatPromptTemplate
 #langchain_project = os.getenv("LANGCHAIN_PROJECT")
 
 # for deployment
-groq_api_key = st.secrets["groq"]["api_key"]
-langchain_tracing = st.secrets["langchain"]["tracing_v2"]
-langchain_endpoint = st.secrets["langchain"]["endpoint"]
-langchain_api_key = st.secrets["langchain"]["api_key"]
-langchain_project = st.secrets["langchain"]["project"]
+groq_api_key = st.secrets["GROQ_API_KEY"]
+langchain_tracing = st.secrets["LANGCHAIN_TRACING_V2"]
+langchain_endpoint = st.secrets["LANGCHAIN_ENDPOINT"]
+langchain_api_key = st.secrets["LANGCHAIN_API_KEY"]
+langchain_project = st.secrets["LANGCHAIN_PROJECT"]
 
 
 # prompt template
