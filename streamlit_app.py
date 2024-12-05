@@ -18,6 +18,7 @@ import os
 # for deployment
 os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 print(st.secrets["GROQ_API_KEY"])
+print('hello')
 os.environ["LANGCHAIN_TRACING_V2"] = str(st.secrets["LANGCHAIN_TRACING_V2"])
 os.environ["LANGCHAIN_ENDPOINT"] = st.secrets["LANGCHAIN_ENDPOINT"]
 os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGCHAIN_API_KEY"]
