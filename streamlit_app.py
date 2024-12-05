@@ -21,7 +21,7 @@ langchain_tracing = st.secrets["LANGCHAIN_TRACING_V2"]
 langchain_endpoint = st.secrets["LANGCHAIN_ENDPOINT"]
 langchain_api_key = st.secrets["LANGCHAIN_API_KEY"]
 langchain_project = st.secrets["LANGCHAIN_PROJECT"]
-print(langchain_endpoint)
+print(langchain_project)
 # prompt template
 prompt = ChatPromptTemplate([
     ('user','You are a helpful Q&A chatbot, your name is Sierra and you are created by Wassim Hamra. Answer the user questions in 4 sentences only'),
