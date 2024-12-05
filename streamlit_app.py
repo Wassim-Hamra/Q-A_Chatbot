@@ -2,26 +2,26 @@ import streamlit as st
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-
+import os
 # Loading environ variables
 
 # for local use
-#import os
+
 #from dotenv import load_dotenv
 #load_dotenv()
-#groq_api_key = os.getenv("GROQ_API_KEY")
-#langchain_tracing = os.getenv("LANGCHAIN_TRACING_V2")
-#langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
-#langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
-#langchain_project = os.getenv("LANGCHAIN_PROJECT")
+#os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+#os.environ["LANGCHAIN_TRACING_V2"] = os.getenv("LANGCHAIN_TRACING_V2")
+#os.environ["LANGCHAIN_ENDPOINT"] = os.getenv("LANGCHAIN_ENDPOINT")
+#os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+#os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGCHAIN_PROJECT")
 
 # for deployment
-groq_api_key = st.secrets["GROQ_API_KEY"]
-langchain_tracing = st.secrets["LANGCHAIN_TRACING_V2"]
-langchain_endpoint = st.secrets["LANGCHAIN_ENDPOINT"]
-langchain_api_key = st.secrets["LANGCHAIN_API_KEY"]
-langchain_project = st.secrets["LANGCHAIN_PROJECT"]
-print(langchain_project)
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+os.environ["LANGCHAIN_TRACING_V2"] = st.secrets["LANGCHAIN_TRACING_V2"]
+os.environ["LANGCHAIN_ENDPOINT"] = st.secrets["LANGCHAIN_ENDPOINT"]
+os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGCHAIN_API_KEY"]
+os.environ["LANGCHAIN_PROJECT"] = st.secrets["LANGCHAIN_PROJECT"]
+
 # prompt template
 prompt = ChatPromptTemplate([
     ('user','You are a helpful Q&A chatbot, your name is Sierra and you are created by Wassim Hamra. Answer the user questions in 4 sentences only'),
